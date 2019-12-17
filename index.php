@@ -1,75 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Campus Contest</title>
-    <link rel="stylesheet" type="text/css" href="index_style.css">
-</head>
-<!--Corp du HTML-->
- <body>
- <?php include 'bdd.php';?>
- <!--header-->
-  <header>
-    <!-- menu -->
-    <nav>
-        <!-- liste à puces -->
-        <ul class="niv_1">
-            <li>
-                <a href="#" title="Acceuil">Accueil</a>
-            </li>
-            <li>
-                <a href="#" title="Catégories">Moi</a>
-            </li>
-            <li>
-                <a href="#" title="Catégories">Projet</a>
-            </li>
-            <li>
-                <a href="#" title="Contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- réseaux sociaux -->
-  </header> 
- <section class="header_title">
-     <h1>Campus Contest</h1>
- </section>
-<!-- bloc 1-->
-<div class="mid_block">
-    <!-- bloc 2-->
-    <aside>
-        <!-- bloc 2.1-->
-        <a style="background-image: url('assets/images/Projet1.png');">
-        <div>
-            <!-- titre -->
-            <span class="nom">Projet 1</span>
-            <!-- date -->
-            <span class="date">jj/mm/aaaa</span>
-        </div>
-        </a>
-         <!-- bloc 2.2 -->
-        <a style="background-image: url('assets/images/Projet2.png');">
-        <div>
-            <!-- titre -->
-             <span class="nom">Projet 2</span>
-             <!-- date -->
-             <span class="date">jj/mm/aaaa</span>
-        </div> 
-        </a>
-        <!-- bloc 2.3 -->
-        <a style="background-image: url('assets/images/Projet3.png');">
-        <div>  
-            <!-- titre -->
-             <span class="nom">Projet 3</span>
-             <!-- date -->
-             <span class="date">jj/mm/aaaa</span>
-        </div> 
-        </a>
-    </aside>
-    <!-- bloc de 3 -->
+    <head>
+        <meta charset="UTF-8">
+        <title>Campus Contest</title>
+        <link rel="stylesheet" type="text/css" href="index_style.css">
+    </head>
+    <!--Corp du HTML-->
+    <body>
+    <?php include 'bdd.php';?>
+    <!--header-->
+    <header>
+        <!-- menu -->
+        <nav>
+            <!-- liste à puces -->
+            <ul class="niv_1">
+                <li>
+                    <a href="#" title="Acceuil">Accueil</a>
+                </li>
+                <li>
+                    <a href="#" title="Catégories">Moi</a>
+                </li>
+                <li>
+                    <a href="#" title="Catégories">Projet</a>
+                </li>
+                <li>
+                    <a href="#" title="Contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- réseaux sociaux -->
+    </header> 
+    <section class="header_title">
+        <h1>Campus Contest</h1>
+    </section>
+    <!-- bloc de 1 -->
     <section>
     <div class="txt_intro">
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi velit voluptates modi assumenda totam. Voluptate, facilis quos quasi quae illo reprehenderit aperiam tempora quibusdam, consequuntur recusandae nisi nesciunt pariatur voluptatibus.   
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero in, esse vel accusantium quod eum veniam, officia magnam ullam error, ipsum dignissimos quia sunt doloremque! Voluptates veniam quisquam obcaecati sit.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis in necessitatibus nobis distinctio veniam, enim nam animi error magni maxime! Modi fugit explicabo ratione at voluptatibus, fuga voluptates cupiditate voluptas.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam consequuntur quaerat saepe in ipsa tempora deserunt, laudantium sunt quos ratione! Voluptate dolorum eos dolorem repellat, dicta corrupti facilis dolor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ipsum sed unde voluptatibus itaque dolorum repudiandae culpa commodi asperiores sapiente inventore molestiae rerum sunt eveniet nostrum quisquam, corporis, alias illo!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quod sint aliquid in dolorem eius quo, laboriosam aspernatur blanditiis reiciendis porro ea labore optio fugit dicta tenetur nesciunt! Odit, quidem?
+            
         </p>
 
         <a href="javascript:void(0)" id="1" class="onButton" onclick="FnBookmark('1','on');">Jerem On</a>
@@ -77,8 +51,13 @@
         <a href="javascript:void(0)" onClick="updateId('2')">Chacha</a>  
     </div>  
     <div class="txt_intro">
+<<<<<<< HEAD
     <?php
         $mysqli->real_query("SELECT nom, prenom, utiliser FROM users ORDER BY id ASC");
+=======
+    <!-- <?php
+        $mysqli->real_query("SELECT nom, prenom FROM users ORDER BY id ASC");
+>>>>>>> 993f5cb2d3e6385d9525244ff97123ad26607409
         $res = $mysqli->use_result();
 
         while ($row = $res->fetch_assoc()) {
