@@ -71,16 +71,21 @@
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi velit voluptates modi assumenda totam. Voluptate, facilis quos quasi quae illo reprehenderit aperiam tempora quibusdam, consequuntur recusandae nisi nesciunt pariatur voluptatibus.   
         </p>
+
+        <a href="javascript:void(0)" id="1" class="onButton" onclick="FnBookmark('1','on');">Jerem On</a>
+        <a href="javascript:void(0)" id="1" class="onButton" onclick="FnBookmark('1','off');">Jerem Off</a>
+        <a href="javascript:void(0)" onClick="updateId('2')">Chacha</a>  
     </div>  
     <div class="txt_intro">
     <?php
-        $mysqli->real_query("SELECT nom, prenom FROM users ORDER BY id ASC");
+        $mysqli->real_query("SELECT nom, prenom, utiliser FROM users ORDER BY id ASC");
         $res = $mysqli->use_result();
 
         while ($row = $res->fetch_assoc()) {
             echo '<div class="test">';
             echo " Nom = " . $row['nom'] . "\n<br>";
             echo " Prénom = " . $row['prenom'] . "\n<br>";
+            echo " Utiliser = " . $row['utiliser'] . "\n<br>";
             echo "<br></div>";
         }
     ?>
@@ -110,3 +115,26 @@
  </footer>
  </body>
 </html>
+
+<script>
+function FnBookmark(id,mode){
+
+$.ajax({
+                    url:'update.php',
+                    data:{mode:mode,id:id},
+                    dataType:'json',
+                    success:function(data){
+                          if(mode == "on")
+                          {
+                              $("#1").attr("class", "offbutton");
+                              $("#1").attr("onClick","FnBookmark('1','off')");
+                          }
+                          else
+                          {
+                              $("#1").attr("class", "onbutton");
+                              $("#1").attr("onClick","FnBookmark('1','on')");
+
+                          }
+                    }
+      });
+</script>
