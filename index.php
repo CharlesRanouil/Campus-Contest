@@ -78,20 +78,20 @@
         $res = $mysqli->use_result();
 
         while ($row = $res->fetch_assoc()) {
+            echo '<div class="test">';
             echo " Nom = " . $row['nom'] . "\n<br>";
             echo " Prénom = " . $row['prenom'] . "\n<br>";
-            echo "<br>";
+            echo "<br></div>";
         }
     ?>
-    <?php
-        $mysqli->real_query("SELECT url FROM image");
+    <!-- <?php  
+        $mysqli->real_query("SELECT URL, description FROM image WHERE description='Logo'");
         $res = $mysqli->use_result();
-        
-        while ($row = $res->fetch_assoc())
-        {
-            echo '<a href=" $row['.url.'] " alt="" width="" height="" /></a>';
+
+        while ($row = $res->fetch_assoc()) {
+            echo '<img src="' . $row["URL"] . '" alt="' . $row["description"] . '">';
         }
-    ?>
+    ?> -->
     </div>
  <!--footer-->
  <footer>

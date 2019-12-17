@@ -29,3 +29,6 @@ ul.niv_1 > li {
 ul.niv_1 li a:hover, ul.niv_1 li a:focus {
 	color: goldenrod;
 }
+.test {
+	color: aqua;
+}
