@@ -83,6 +83,15 @@
             echo "<br>";
         }
     ?>
+    <?php
+        $mysqli->real_query("SELECT url FROM image");
+        $res = $mysqli->use_result();
+        
+        while ($row = $res->fetch_assoc())
+        {
+            echo '<a href=" $row['.url.'] " alt="" width="" height="" /></a>';
+        }
+    ?>
     </div>
  <!--footer-->
  <footer>
