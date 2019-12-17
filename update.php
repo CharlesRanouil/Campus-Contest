@@ -1,46 +1,39 @@
 <?php 
-if(isset($_GET['id']) && !empty($_GET['id']))
-{
-    $id = $_GET['id'];
-    include('bdd.php');
 
-    if ($mysqli->connect_error) {
-        die("Connection failed: " . $mysqli->connect_error);
+// db connection
+include 'bdd.php';
+
+
+if(isset($_POST['passed'])){
+
+    $utiliser = $mysqli->query("SELECT utiliser FROM users WHERE id = 1");
+    $donnee = $utiliser->fetch_assoc();
+
+    if ($donnee['utiliser'] == 0) {
+        mysqli_query($mysqli,"UPDATE users SET utiliser = 1 WHERE id = 1 ");
+    } 
+    
+    if ($donnee['utiliser'] == 1) {
+        mysqli_query($mysqli,"UPDATE users SET utiliser = 0 WHERE id = 1 ");
     }
 
+}
 
-if($_GET['mode'] == "on")
-{
-    $id = $_Get['id']; // this has the value 1
-    $sql = "UPDATE user
-        SET utiliser='1'
-        WHERE id='$id'";
+if(isset($_POST['insufficient'])){
 
-    //then execute the query
+
+    $utiliser = $mysqli->query("SELECT utiliser FROM users WHERE id = 2");
+    $donnee = $utiliser->fetch_assoc();
+
+        if ($donnee['utiliser'] == 0) {
+            mysqli_query($mysqli,"UPDATE users SET utiliser = 1 WHERE id = 2 ");
+        } 
+        
+        if ($donnee['utiliser'] == 1) {
+            mysqli_query($mysqli,"UPDATE users SET utiliser = 0 WHERE id = 2 ");
+        }
 
 
 }
-if($_GET['mode'] == "off")
-{ 
-   $sql = "UPDATE user
-        SET utiliser='0'
-        WHERE id='$id'";
-
-    //then execute the query
-
-
-}
-
-if ($mysqli->query($sql) === TRUE) {
-    echo "Record updated successfully";
-} else {
-    echo "Error updating record: " . $mysqli->error;
-}
-
-$mysqli->close(); die;
-}
-
-header('Content-Type: application/json; charset=utf-8');
-exit;
-
+header ("Location: $_SERVER[HTTP_REFERER]" );
 ?>

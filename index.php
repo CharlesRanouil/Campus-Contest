@@ -15,16 +15,16 @@
             <!-- liste à puces -->
             <ul class="niv_1">
                 <li>
-                    <a href="#" title="Acceuil">Accueil</a>
+                    <a href="#" class="btn btn-outline-dark btn-lg" title="Acceuil">Accueil</a>
                 </li>
                 <li>
-                    <a href="#" title="Catégories">Moi</a>
+                    <a href="#" class="btn btn-outline-dark btn-lg" title="Catégories">Moi</a>
                 </li>
                 <li>
-                    <a href="#" title="Catégories">Projet</a>
+                    <a href="#" class="btn btn-outline-dark btn-lg" title="Catégories">Projet</a>
                 </li>
                 <li>
-                    <a href="#" title="Contact">Contact</a>
+                    <a href="#" class="btn btn-outline-dark btn-lg" title="Contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -47,9 +47,10 @@
             
         </p>
 
-        <a href="javascript:void(0)" id="1" class="onButton" onclick="FnBookmark('1','on');">Jerem On</a>
-        <a href="javascript:void(0)" id="1" class="onButton" onclick="FnBookmark('1','off');">Jerem Off</a>
-        <a href="javascript:void(0)" onClick="updateId('2')">Chacha</a>  
+        <form method="post" action="update.php">
+            <button type="submit" name="passed" id="passed" class="btn btn-primary">Jerem<i class="fa fa-check"></i></button>
+            <button type="submit" name="insufficient" id="insufficient" class="btn btn-primary">Charles<i class="fa fa-times"></i></button>
+        </form></br>
     </div>  
     <div class="txt_intro">
     <?php
@@ -73,11 +74,29 @@
         }
     ?> -->
     </div>
+    </body>
  <!--footer-->
  <footer>
      <!-- gauche  -->
-    <div>
-        &copy; 2019 - <a target="_blank" href="#" title="Charles RANOUIL">RANOUIL Charles</a>
+    <div class="text-footer">
+        &copy; 2019 - 
+            
+        <?php
+        $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+        $res = $mysqli->use_result();
+
+        while ($row = $res->fetch_assoc()) {
+            echo '<a target="_blank" href="#" title="';
+            echo $row['nom']."\n";
+            echo $row['prenom'];
+            echo '">';
+            echo $row['nom']."\n";
+            echo $row['prenom'];
+            echo "</a>";
+        }
+    ?>
+
+        </a>
     </div>
     <!-- droite -->
     <div class="right">
@@ -88,7 +107,6 @@
         </ul>
     </div>
  </footer>
- </body>
 </html>
 
 <script>
