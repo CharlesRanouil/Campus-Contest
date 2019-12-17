@@ -29,10 +29,11 @@
             </ul>
         </nav>
         <!-- réseaux sociaux -->
-    </header> 
+    
     <section class="header_title">
         <h1>Campus Contest</h1>
     </section>
+    </header> 
     <!-- bloc de 1 -->
     <section>
     <div class="txt_intro">
@@ -51,13 +52,8 @@
         <a href="javascript:void(0)" onClick="updateId('2')">Chacha</a>  
     </div>  
     <div class="txt_intro">
-<<<<<<< HEAD
     <?php
         $mysqli->real_query("SELECT nom, prenom, utiliser FROM users ORDER BY id ASC");
-=======
-    <!-- <?php
-        $mysqli->real_query("SELECT nom, prenom FROM users ORDER BY id ASC");
->>>>>>> 993f5cb2d3e6385d9525244ff97123ad26607409
         $res = $mysqli->use_result();
 
         while ($row = $res->fetch_assoc()) {
