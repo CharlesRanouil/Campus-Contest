@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 déc. 2019 à 12:34
+-- Généré le :  mar. 17 déc. 2019 à 15:22
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -34,14 +34,15 @@ CREATE TABLE IF NOT EXISTS `image` (
   `URL` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `image`
 --
 
 INSERT INTO `image` (`ID`, `URL`, `description`) VALUES
-(1, 'assets/images/logo_ca.png', 'Logo campus academy');
+(1, 'assets/images/logo_ca.png', 'Logo campus academy'),
+(2, 'assets\\images\\bitcoin.jpg', 'Logo');
 
 -- --------------------------------------------------------
 
@@ -52,6 +53,7 @@ INSERT INTO `image` (`ID`, `URL`, `description`) VALUES
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `ID` int(4) NOT NULL AUTO_INCREMENT,
+  `utiliser` tinyint(1) NOT NULL DEFAULT '0',
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -62,9 +64,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`ID`, `nom`, `prenom`, `email`) VALUES
-(1, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com'),
-(2, 'RANOUIL', 'Charles', '');
+INSERT INTO `users` (`ID`, `utiliser`, `nom`, `prenom`, `email`) VALUES
+(1, 0, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com'),
+(2, 0, 'RANOUIL', 'Charles', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
