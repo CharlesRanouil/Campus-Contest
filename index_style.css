@@ -1,7 +1,9 @@
 /* MENU */
 nav {
-	background-color: rgba(255, 255, 255, 0.750);
-	box-shadow: 0px 1px 11px rgba(0,0,0,0.4);
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
+	background-color: bisque;
 }
 nav ul {
 	list-style-type: none;
@@ -15,7 +17,9 @@ nav a, nav a:visited {
 	font-size: 22px;
 }
 .niv_1  {
+	margin-top: 0%;
 	margin-bottom: 0%;
+	text-align: center;
 }
 ul.niv_1 > li {
 	display: inline-block;
@@ -23,31 +27,5 @@ ul.niv_1 > li {
 }
 
 ul.niv_1 li a:hover, ul.niv_1 li a:focus {
-	color: rgb(109, 177, 8);
-}
-
-ul.niv_1 > li:hover ul.niv_2 {
-	display: block;
-
-}
-
-ul.niv_2 {
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 100%;
-	background-color:rgba(255, 255, 255, 0.750);
-	padding-left: 0;
-	box-shadow: 0px 13px 11px rgba(0,0,0,0.4);
-	z-index: 100000;
-}
-
-ul.niv_2 li a,
-ul.niv_2 li a:visited {
-	text-align: left;
-}
-
-ul.niv_2 li a:hover,
-ul.niv_2 li a:focus {
-	color: rgb(109, 177, 8);
+	color: goldenrod;
 }
