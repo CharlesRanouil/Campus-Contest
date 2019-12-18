@@ -9,6 +9,7 @@
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/bootstrap-social.css">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <!--Corp du HTML-->
     <body>
@@ -37,7 +38,7 @@
         </div>
         <!-- réseaux sociaux -->
     <section class="header_title">
-        <h1>Portfolio <br> <br>
+        <h1>Portfolio<br>
         <ul class="name_left">
                     <!-- <a href="index.php" class="title_name" title="Accueil"> -->
                     <?php
