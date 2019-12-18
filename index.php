@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="index_style.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Meie+Script&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3Aregular%2C300%7COpen%20Sans%3A700%2C400&amp;subset=">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/bootstrap-social.css">
@@ -51,7 +52,7 @@
         <!-- réseaux sociaux -->
     
     <section class="header_title">
-        <h1>Campus Contest</h1>
+        <h1>Portofolio</h1>
     </section>
     </header> 
     <!-- bloc de 1 -->
