@@ -17,7 +17,7 @@
     <!--header-->
     <header>
         <!-- menu -->
-        <nav>
+        <nav class="mini">
             <!-- liste à puces -->
             <ul class="name_left">
                 <h2>
