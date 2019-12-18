@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 18 déc. 2019 à 10:10
+-- Généré le :  mer. 18 déc. 2019 à 17:17
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -21,6 +21,31 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `portfolio`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaire`
+--
+
+DROP TABLE IF EXISTS `commentaire`;
+CREATE TABLE IF NOT EXISTS `commentaire` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `commentaire` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `commentaire`
+--
+
+INSERT INTO `commentaire` (`id`, `nom`, `prenom`, `commentaire`) VALUES
+(1, 'Kelly', 'Travis', 'Je recommanderais vivement à tous ceux qui recherchent de l\'aide pour leur référencement. Il est très compétent, franc et honnête sur le processus de classement des sites en haut de Google. Vous ne serez pas déçu lorsque vous travaillerez avec lui.'),
+(4, 'Belder', 'Marine', 'Les compétences de Daniel dans l\'optimisation des moteurs de recherche sont bien supérieures à la moyenne. Il a grandement contribué à la réussite du projet que nous avons travaillé ensemble.'),
+(3, 'Grechko', 'Constantine', 'J\'était en charge de toute la partie SEO, du PPC et de l\'aide sur des campagnes comme Outbrain. Il est très professionnel, toujours disponible pour toute question. Je recommande fortement de travailler avec lui.'),
+(7, 'Nela', '', 'Il n\'y a pas trop de gens avec qui j\'ai travaillé qui dépassent vraiment mes attentes élevées pour l\'optimisation des moteurs de recherche.');
 
 -- --------------------------------------------------------
 
@@ -70,8 +95,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`ID`, `utiliser`, `nom`, `prenom`, `email`, `facebook`, `twitter`, `likedin`, `github`, `instagram`) VALUES
-(1, 1, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com', 'https://www.facebook.com/james.gglebg', 'https://twitter.com/Jeremy_b86', 'https://www.linkedin.com/in/j%C3%A9r%C3%A9my-brunet-366684194/', 'https://github.com/Jeremyb86', 'https://www.instagram.com/jeremy_b86/'),
-(2, 0, 'RANOUIL', 'Charles', 'ranouilcharles@gmail.com', 'https://www.facebook.com/charles.ranouil', 'https://twitter.com/Charles_Rnl', 'https://www.linkedin.com/in/charles-ranouil-3a4845194/', 'https://github.com/CharlesRanouil', 'https://www.instagram.com/charlesrnl/');
+(1, 0, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com', 'https://www.facebook.com/james.gglebg', 'https://twitter.com/Jeremy_b86', 'https://www.linkedin.com/in/j%C3%A9r%C3%A9my-brunet-366684194/', 'https://github.com/Jeremyb86', 'https://www.instagram.com/jeremy_b86/'),
+(2, 1, 'RANOUIL', 'Charles', 'ranouilcharles@gmail.com', 'https://www.facebook.com/charles.ranouil', 'https://twitter.com/Charles_Rnl', 'https://www.linkedin.com/in/charles-ranouil-3a4845194/', 'https://github.com/CharlesRanouil', 'https://www.instagram.com/charlesrnl/');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

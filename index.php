@@ -104,14 +104,31 @@
             </p>
         </div>
     </div>
-    <!-- <?php  
-        $mysqli->real_query("SELECT URL, description FROM image WHERE description='Logo'");
-        $res = $mysqli->use_result();
+    <h2>Ce que les gens pense:</h2>
+    <div id="slider">
+      <div class="container">
+          <?php
+                $mysqli->real_query("SELECT * FROM commentaire");
+                $res = $mysqli->use_result();
 
-        while ($row = $res->fetch_assoc()) {
-            echo '<img src="' . $row["URL"] . '" alt="' . $row["description"] . '">';
-        }
-    ?> -->
+                while ($row = $res->fetch_assoc()) {
+                    echo '<div class="slide">';
+                    echo '<h3>';
+                    echo $row['nom']." ";
+                    echo $row['prenom'];
+                    echo '</h3>';
+                    echo '<p>';
+                    echo $row['commentaire'];
+                    echo '</p>';
+                    echo '</div>';
+                }
+            ?>
+      </div>
+    </div>
+            
+        <span id="timeline"></span>
+    </section>
+
     </body>
  <!--footer-->
  <footer>
