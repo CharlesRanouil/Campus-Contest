@@ -7,6 +7,8 @@
         <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3Aregular%2C300%7COpen%20Sans%3A700%2C400&amp;subset=">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/bootstrap-social.css">
     </head>
     <!--Corp du HTML-->
     <body>
@@ -134,9 +136,66 @@
 
         </br></br>
         <form method="post" action="update.php">
-            <button type="submit" name="jeremy" id="jeremy" class="btn btn-primary">Jeremy<i class="fa fa-check"></i></button>
-            <button type="submit" name="charles" id="charles" class="btn btn-primary">Charles<i class="fa fa-times"></i></button>
+            <button type="submit" name="jeremy" id="jeremy" class="btn btn-primary">Jeremy</button>
+            <button type="submit" name="charles" id="charles" class="btn btn-primary">Charles</button>
         </form>
+    </div>
+    <div class="footer_social">
+    <?php
+            $mysqli->real_query("SELECT twitter FROM users WHERE utiliser = 1");
+            $res = $mysqli->use_result();
+
+            while ($row = $res->fetch_assoc()) {
+                echo '<a href="';
+                echo $row['twitter']." ";
+                echo '" class="btn btn-twitter">';
+            }
+        ?>
+    <span class = "fa fa-twitter"></span></a>
+    <?php
+            $mysqli->real_query("SELECT facebook FROM users WHERE utiliser = 1");
+            $res = $mysqli->use_result();
+
+            while ($row = $res->fetch_assoc()) {
+                echo '<a href="';
+                echo $row['facebook']." ";
+                echo '" class="btn btn-facebook">';
+            }
+        ?>
+    <span class = "fa fa-facebook"></span></a>
+    <?php
+            $mysqli->real_query("SELECT github FROM users WHERE utiliser = 1");
+            $res = $mysqli->use_result();
+
+            while ($row = $res->fetch_assoc()) {
+                echo '<a href="';
+                echo $row['github']." ";
+                echo '" class="btn btn-github">';
+            }
+        ?>
+    <span class = "fa fa-github"></span></a>
+    <?php
+            $mysqli->real_query("SELECT instagram FROM users WHERE utiliser = 1");
+            $res = $mysqli->use_result();
+
+            while ($row = $res->fetch_assoc()) {
+                echo '<a href="';
+                echo $row['instagram']." ";
+                echo '" class="btn btn-instagram">';
+            }
+        ?>
+    <span class = "fa fa-instagram"></span></a>
+    <?php
+            $mysqli->real_query("SELECT likedin FROM users WHERE utiliser = 1");
+            $res = $mysqli->use_result();
+
+            while ($row = $res->fetch_assoc()) {
+                echo '<a href="';
+                echo $row['likedin']." ";
+                echo '" class="btn btn-primary btn-linkedin">';
+            }
+        ?>
+    <span class = "fa fa-linkedin"></span></a>      
     </div>
     <!-- droite -->
     <div class="right">
