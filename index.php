@@ -16,11 +16,16 @@
     <!--header-->
     <header>
         <!-- menu -->
-        <div class="navbar" id='nav'>
+        <div class="navbar" id="nav">
             <!-- liste à puces -->
                 <!-- </a> -->
             </h2>
+<<<<<<< HEAD
             <ul class="niv_1">
+=======
+            </ul>
+            <ul class="niv_1" id="nav2">
+>>>>>>> refs/remotes/origin/master
                 <li>
                     <a href="#" class="button" title="Acceuil">Accueil</a>
                 </li>
@@ -175,40 +180,41 @@
     <!-- droite -->
     <div class="right">
         <ul class="footer_links">
-                <a href="#" title="Mentions légales">Mentions légales</a>
+            <a href="#" title="Mentions légales">Mentions légales</a>
         </ul>
     </div>
- </footer>
-<div class="sub_footer">
-    <div class="text-footer">
-        <form method="post" action="update.php">
-            <button type="submit" name="jeremy" id="jeremy" class="btn btn-primary">Jeremy</button>
-            <button type="submit" name="charles" id="charles" class="btn btn-primary">Charles</button>
-        </form>
+</footer>
+    <div class="sub_footer">
+        <div class="text-footer">
+            <form method="post" action="update.php">
+                <button type="submit" name="jeremy" id="jeremy" class="btn btn-primary">Jeremy</button>
+                <button type="submit" name="charles" id="charles" class="btn btn-primary">Charles</button>
+            </form>
+        </div>
+        <div class="coppy-right">
+            &copy; 2019 - 
+                
+                <?php
+                    $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                    $res = $mysqli->use_result();
+        
+                    while ($row = $res->fetch_assoc()) {
+                        echo '<a target="_blank" href="#" title="';
+                        echo $row['nom']." ";
+                        echo $row['prenom'];
+                        echo '">';
+                        echo $row['nom']."\n";
+                        echo $row['prenom'];
+                        echo "</a>";
+                    }
+                ?>
+        </div>
     </div>
-    <div class="coppy-right">
-        &copy; 2019 - 
-            
-            <?php
-                $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
-                $res = $mysqli->use_result();
-    
-                while ($row = $res->fetch_assoc()) {
-                    echo '<a target="_blank" href="#" title="';
-                    echo $row['nom']." ";
-                    echo $row['prenom'];
-                    echo '">';
-                    echo $row['nom']."\n";
-                    echo $row['prenom'];
-                    echo "</a>";
-                }
-            ?>
-    </div>
-</div>
 </html>
 <script type="text/javascript">
    	
        var  nav = document.getElementById('nav');
+       var  nav2 = document.getElementById('nav2');
      
      window.onscroll = function(){
 
@@ -217,9 +223,10 @@
              nav.style.background = "#FFF";
              nav.style.height = "50px";
              nav.style.boxShadow = "0px 1px 11px rgba(0,0,0,0.4)";
-             nav.style.color = "#000";
+             nav2.style.fontsize = "40px";
+             nav2.style.color = "#000";
          }
-         else{
+         else {
              nav.style.background = "transparent";
              nav.style.boxShadow = "none";
          }

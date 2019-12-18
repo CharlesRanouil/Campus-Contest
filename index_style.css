@@ -4,7 +4,6 @@ html {
 /* URL */
 a, a:visited {
 	text-decoration: none;
-	color: #000;
 	transition: all 0.4s ease;
 }
 /* a.title_name, a:visited.title_name,
@@ -63,12 +62,13 @@ nav a, nav a:visited {
 	font-size: 40px;
 }
 
-.niv_1  {
+.niv_1, .niv_1 a  {
 	margin-top: 0%;
 	margin-bottom: 0%;
 	text-align: right;
 	margin-right: 30px;
-	font-size: 50px;
+	font-size: 40px;
+	color: #000;
 }
 
 .button {
@@ -79,6 +79,7 @@ nav a, nav a:visited {
 ul.niv_1 > li {
 	display: inline-block;
 	position: relative;
+	color: #000;
 }
 
 ul.niv_1 li a:hover, ul.niv_1 li a:focus {
@@ -127,10 +128,8 @@ footer {
 	background-color: #011735;
 	position: relative;
 	min-height: 200px;
-
 }
-footer .right {
-	color: rgb(255, 255, 255);
+.right {
 	position: absolute;
 	right: 300px;
 	top: 5px;
@@ -141,8 +140,8 @@ div.text-footer {
 	text-align: left;
 	display: inline-block;
 }
-footer a, a:visited {
-	text-decoration: none;
+footer a, 
+footer a:visited {
 	color: rgb(255, 255, 255);
 	transition: all 0.4s ease;
 }
@@ -159,10 +158,10 @@ footer a, a:visited {
 	position: relative;
 
 }
-.coppy-right {
+.coppy-right, .coppy-right a {
+	color: rgb(255, 255, 255);
 	position: relative;
 	text-align: center;
-	display: block;
 	padding-bottom: 10px;
 }
 /* Bouton BootStrap */
