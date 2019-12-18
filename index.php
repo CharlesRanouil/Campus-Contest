@@ -38,6 +38,9 @@
         </div>
         <!-- réseaux sociaux -->
     <section class="header_title">
+        <div class="logo">
+            <img src="assets/images/logo_ca.png" alt="logo_campus_academy" width="10%" height="10%">
+        </div>
         <h1>Portfolio<br>
         <ul class="name_left">
                     <!-- <a href="index.php" class="title_name" title="Accueil"> -->
@@ -206,28 +209,25 @@
                 ?>
         </div>
     </div>
+    <script type="text/javascript">
+    
+    var  nav = document.getElementById('nav');
+    var  nav2 = document.getElementById('nav2');
+    
+    window.onscroll = function(){
+
+        if (window.pageYOffset >1000) {
+
+            nav.style.background = "#011735";
+            nav.style.height = "50px";
+            nav.style.boxShadow = "0px 1px 11px rgba(0,0,0,0.4)";
+            nav2.style.fontsize = "30px";
+            nav2.style.color = "#000";
+        }
+        else {
+            nav.style.background = "transparent";
+            nav.style.boxShadow = "none";
+        }
+    }
+    </script>
 </html>
-<script type="text/javascript">
-   	
-       var  nav = document.getElementById('nav');
-       var  nav2 = document.getElementById('nav2');
-     
-     window.onscroll = function(){
-
-         if (window.pageYOffset >1000) {
-
-             nav.style.background = "#FFF";
-             nav.style.height = "50px";
-             nav.style.boxShadow = "0px 1px 11px rgba(0,0,0,0.4)";
-             nav2.style.fontsize = "40px";
-             nav2.style.color = "#000";
-         }
-         else {
-             nav.style.background = "transparent";
-             nav.style.boxShadow = "none";
-         }
-     }
-
-
-
-  </script>
