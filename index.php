@@ -4,12 +4,11 @@
         <meta charset="UTF-8">
         <title>Campus Contest</title>
         <link rel="stylesheet" type="text/css" href="index_style.css">
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Meie+Script&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3Aregular%2C300%7COpen%20Sans%3A700%2C400&amp;subset=">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/bootstrap-social.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     </head>
     <!--Corp du HTML-->
     <body>
@@ -36,16 +35,16 @@
             </ul>
             <ul class="niv_1">
                 <li>
-                    <a href="#" class="btn btn-outline-dark btn-lg" title="Acceuil">Accueil</a>
+                    <a href="#" class="button" title="Acceuil">Accueil</a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-outline-dark btn-lg" title="Catégories">Moi</a>
+                    <a href="#" class="button" title="Catégories">Moi</a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-outline-dark btn-lg" title="Catégories">Projet</a>
+                    <a href="#" class="button" title="Catégories">Projet</a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-outline-dark btn-lg" title="Contact">Contact</a>
+                    <a href="#" class="button" title="Contact">Contact</a>
                 </li>
             </ul>
         </nav>
