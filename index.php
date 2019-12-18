@@ -20,12 +20,7 @@
             <!-- liste à puces -->
                 <!-- </a> -->
             </h2>
-<<<<<<< HEAD
             <ul class="niv_1">
-=======
-            </ul>
-            <ul class="niv_1" id="nav2">
->>>>>>> refs/remotes/origin/master
                 <li>
                     <a href="#" class="button" title="Acceuil">Accueil</a>
                 </li>
