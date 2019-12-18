@@ -16,7 +16,7 @@
     <!--header-->
     <header>
         <!-- menu -->
-        <nav class="mini">
+        <div class="navbar" id='nav'>
             <!-- liste à puces -->
             <ul class="name_left">
                 <h2>
@@ -47,7 +47,7 @@
                     <a href="#nav3" class="button" title="Contact">Contact</a>
                 </li>
             </ul>
-        </nav>
+                    </div>
         <!-- réseaux sociaux -->
     
     <section class="header_title">
@@ -207,3 +207,25 @@
     </div>
 </div>
 </html>
+<script type="text/javascript">
+   	
+       var  nav = document.getElementById('nav');
+     
+     window.onscroll = function(){
+
+         if (window.pageYOffset >1000) {
+
+             nav.style.background = "#FFF";
+             nav.style.height = "50px";
+             nav.style.boxShadow = "0px 1px 11px rgba(0,0,0,0.4)";
+             nav.style.color = "#000";
+         }
+         else{
+             nav.style.background = "transparent";
+             nav.style.boxShadow = "none";
+         }
+     }
+
+
+
+  </script>
