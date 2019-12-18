@@ -1,3 +1,6 @@
+html {
+	scroll-behavior: smooth;
+  }
 /* URL */
 a, a:visited {
 	text-decoration: none;
@@ -120,6 +123,7 @@ footer {
 	padding: 20px 10px 20px 6px;
 	background-color: #011735;
 	position: relative;
+	min-height: 200px;
 
 }
 footer .right {
@@ -130,6 +134,9 @@ footer .right {
 }
 div.text-footer {
 	margin-left: 50px;
+	margin-top: 20px;
+	text-align: left;
+	display: inline-block;
 }
 footer a, a:visited {
 	text-decoration: none;
@@ -139,9 +146,22 @@ footer a, a:visited {
 .footer_social {
 	position: relative;
 	text-align: center;
+}
+.sub_footer {
+    background: #001026;
+    min-height: 67px;
+    color: rgba(255,255,255,.35);
+    font-family: open sans,sans-serif;
+	align-items: center;
+	position: relative;
 
 }
-
+.coppy-right {
+	position: relative;
+	text-align: center;
+	display: block;
+	padding-bottom: 10px;
+}
 /* Bouton BootStrap */
 .btn {
 	display: inline-block;

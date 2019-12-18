@@ -39,13 +39,13 @@
                     <a href="#" class="btn btn-outline-dark btn-lg" title="Acceuil">Accueil</a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-outline-dark btn-lg" title="Catégories">Moi</a>
+                    <a href="#nav1" class="btn btn-outline-dark btn-lg" title="Catégories">Moi</a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-outline-dark btn-lg" title="Catégories">Projet</a>
+                    <a href="#nav2" class="btn btn-outline-dark btn-lg" title="Catégories">Projet</a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-outline-dark btn-lg" title="Contact">Contact</a>
+                    <a href="#nav3" class="btn btn-outline-dark btn-lg" title="Contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -57,7 +57,7 @@
     </header> 
     <!-- bloc de 1 -->
     <section>
-    <div class="txt_intro">
+    <div class="txt_intro" id="nav1">
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi velit voluptates modi assumenda totam. Voluptate, facilis quos quasi quae illo reprehenderit aperiam tempora quibusdam, consequuntur recusandae nisi nesciunt pariatur voluptatibus.   
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero in, esse vel accusantium quod eum veniam, officia magnam ullam error, ipsum dignissimos quia sunt doloremque! Voluptates veniam quisquam obcaecati sit.
@@ -80,7 +80,7 @@
         }
     ?>
     </div>
-    <div class="block_blue">
+    <div class="block_blue" id="nav2">
         <div class="column_container">
             <h2>Titre</h2>
             <h3>Titre 2</h3>
@@ -117,94 +117,94 @@
  <!--footer-->
  <footer>
      <!-- gauche  -->
-    <div class="text-footer">
-        &copy; 2019 - 
-            
+    <div class="footer_social">
         <?php
-            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
-            $res = $mysqli->use_result();
+                $mysqli->real_query("SELECT twitter FROM users WHERE utiliser = 1");
+                $res = $mysqli->use_result();
 
-            while ($row = $res->fetch_assoc()) {
-                echo '<a target="_blank" href="#" title="';
-                echo $row['nom']." ";
-                echo $row['prenom'];
-                echo '">';
-                echo $row['nom']."\n";
-                echo $row['prenom'];
-                echo "</a>";
-            }
-        ?>
+                while ($row = $res->fetch_assoc()) {
+                    echo '<a href="';
+                    echo $row['twitter']." ";
+                    echo '" class="btn btn-twitter">';
+                }
+            ?>
+        <span class = "fa fa-twitter"></span></a>
+        <?php
+                $mysqli->real_query("SELECT facebook FROM users WHERE utiliser = 1");
+                $res = $mysqli->use_result();
 
-        </br></br>
+                while ($row = $res->fetch_assoc()) {
+                    echo '<a href="';
+                    echo $row['facebook']." ";
+                    echo '" class="btn btn-facebook">';
+                }
+            ?>
+        <span class = "fa fa-facebook"></span></a>
+        <?php
+                $mysqli->real_query("SELECT github FROM users WHERE utiliser = 1");
+                $res = $mysqli->use_result();
+
+                while ($row = $res->fetch_assoc()) {
+                    echo '<a href="';
+                    echo $row['github']." ";
+                    echo '" class="btn btn-github">';
+                }
+            ?>
+        <span class = "fa fa-github"></span></a>
+        <?php
+                $mysqli->real_query("SELECT instagram FROM users WHERE utiliser = 1");
+                $res = $mysqli->use_result();
+
+                while ($row = $res->fetch_assoc()) {
+                    echo '<a href="';
+                    echo $row['instagram']." ";
+                    echo '" class="btn btn-instagram">';
+                }
+            ?>
+        <span class = "fa fa-instagram"></span></a>
+        <?php
+                $mysqli->real_query("SELECT likedin FROM users WHERE utiliser = 1");
+                $res = $mysqli->use_result();
+
+                while ($row = $res->fetch_assoc()) {
+                    echo '<a href="';
+                    echo $row['likedin']." ";
+                    echo '" class="btn btn-primary btn-linkedin">';
+                }
+            ?>
+        <span class = "fa fa-linkedin"></span></a>      
+    </div>
+    <!-- droite -->
+    <div class="right">
+        <ul class="footer_links">
+                <a href="#" title="Mentions légales">Mentions légales</a>
+        </ul>
+    </div>
+ </footer>
+<div class="sub_footer">
+    <div class="text-footer">
         <form method="post" action="update.php">
             <button type="submit" name="jeremy" id="jeremy" class="btn btn-primary">Jeremy</button>
             <button type="submit" name="charles" id="charles" class="btn btn-primary">Charles</button>
         </form>
     </div>
-    <div class="footer_social">
-    <?php
-            $mysqli->real_query("SELECT twitter FROM users WHERE utiliser = 1");
-            $res = $mysqli->use_result();
-
-            while ($row = $res->fetch_assoc()) {
-                echo '<a href="';
-                echo $row['twitter']." ";
-                echo '" class="btn btn-twitter">';
-            }
-        ?>
-    <span class = "fa fa-twitter"></span></a>
-    <?php
-            $mysqli->real_query("SELECT facebook FROM users WHERE utiliser = 1");
-            $res = $mysqli->use_result();
-
-            while ($row = $res->fetch_assoc()) {
-                echo '<a href="';
-                echo $row['facebook']." ";
-                echo '" class="btn btn-facebook">';
-            }
-        ?>
-    <span class = "fa fa-facebook"></span></a>
-    <?php
-            $mysqli->real_query("SELECT github FROM users WHERE utiliser = 1");
-            $res = $mysqli->use_result();
-
-            while ($row = $res->fetch_assoc()) {
-                echo '<a href="';
-                echo $row['github']." ";
-                echo '" class="btn btn-github">';
-            }
-        ?>
-    <span class = "fa fa-github"></span></a>
-    <?php
-            $mysqli->real_query("SELECT instagram FROM users WHERE utiliser = 1");
-            $res = $mysqli->use_result();
-
-            while ($row = $res->fetch_assoc()) {
-                echo '<a href="';
-                echo $row['instagram']." ";
-                echo '" class="btn btn-instagram">';
-            }
-        ?>
-    <span class = "fa fa-instagram"></span></a>
-    <?php
-            $mysqli->real_query("SELECT likedin FROM users WHERE utiliser = 1");
-            $res = $mysqli->use_result();
-
-            while ($row = $res->fetch_assoc()) {
-                echo '<a href="';
-                echo $row['likedin']." ";
-                echo '" class="btn btn-primary btn-linkedin">';
-            }
-        ?>
-    <span class = "fa fa-linkedin"></span></a>      
+    <div class="coppy-right">
+        &copy; 2019 - 
+            
+            <?php
+                $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                $res = $mysqli->use_result();
+    
+                while ($row = $res->fetch_assoc()) {
+                    echo '<a target="_blank" href="#" title="';
+                    echo $row['nom']." ";
+                    echo $row['prenom'];
+                    echo '">';
+                    echo $row['nom']."\n";
+                    echo $row['prenom'];
+                    echo "</a>";
+                }
+            ?>
     </div>
-    <!-- droite -->
-    <div class="right">
-        <ul class="footer_links">
-            <li>
-                <a href="#" title="Mentions légales">Mentions légales</a>
-            </li>
-        </ul>
-    </div>
- </footer>
+</div>
 </html>
