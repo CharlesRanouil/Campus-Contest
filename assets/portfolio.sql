@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 déc. 2019 à 15:22
+-- Généré le :  mer. 18 déc. 2019 à 10:10
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -57,6 +57,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `facebook` varchar(255) NOT NULL,
+  `twitter` varchar(255) NOT NULL,
+  `likedin` varchar(255) NOT NULL,
+  `github` varchar(255) NOT NULL,
+  `instagram` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
@@ -64,9 +69,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`ID`, `utiliser`, `nom`, `prenom`, `email`) VALUES
-(1, 0, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com'),
-(2, 0, 'RANOUIL', 'Charles', '');
+INSERT INTO `users` (`ID`, `utiliser`, `nom`, `prenom`, `email`, `facebook`, `twitter`, `likedin`, `github`, `instagram`) VALUES
+(1, 1, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com', 'https://www.facebook.com/james.gglebg', 'https://twitter.com/Jeremy_b86', 'https://www.linkedin.com/in/j%C3%A9r%C3%A9my-brunet-366684194/', 'https://github.com/Jeremyb86', 'https://www.instagram.com/jeremy_b86/'),
+(2, 0, 'RANOUIL', 'Charles', 'ranouilcharles@gmail.com', 'https://www.facebook.com/charles.ranouil', 'https://twitter.com/Charles_Rnl', 'https://www.linkedin.com/in/charles-ranouil-3a4845194/', 'https://github.com/CharlesRanouil', 'https://www.instagram.com/charlesrnl/');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
