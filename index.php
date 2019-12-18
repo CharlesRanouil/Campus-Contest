@@ -38,23 +38,13 @@
                     <a href="#" class="button" title="Acceuil">Accueil</a>
                 </li>
                 <li>
-<<<<<<< HEAD
-                    <a href="#" class="button" title="Catégories">Moi</a>
+                    <a href="#nav1" class="button" title="Catégories">Moi</a>
                 </li>
                 <li>
-                    <a href="#" class="button" title="Catégories">Projet</a>
+                    <a href="#nav2" class="button" title="Catégories">Projet</a>
                 </li>
                 <li>
-                    <a href="#" class="button" title="Contact">Contact</a>
-=======
-                    <a href="#nav1" class="btn btn-outline-dark btn-lg" title="Catégories">Moi</a>
-                </li>
-                <li>
-                    <a href="#nav2" class="btn btn-outline-dark btn-lg" title="Catégories">Projet</a>
-                </li>
-                <li>
-                    <a href="#nav3" class="btn btn-outline-dark btn-lg" title="Contact">Contact</a>
->>>>>>> 536b0df4b51ccbb09e19ec0423a1f468c445d84f
+                    <a href="#nav3" class="button" title="Contact">Contact</a>
                 </li>
             </ul>
         </nav>
