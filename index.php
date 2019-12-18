@@ -18,21 +18,8 @@
         <!-- menu -->
         <div class="navbar" id='nav'>
             <!-- liste à puces -->
-            <ul class="name_left">
-                <h2>
-                    <!-- <a href="index.php" class="title_name" title="Accueil"> -->
-                    <?php
-                        $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
-                        $res = $mysqli->use_result();
-
-                        while ($row = $res->fetch_assoc()) {
-                            echo $row['nom']." ";
-                            echo $row['prenom'];
-                        }
-                    ?>
                 <!-- </a> -->
             </h2>
-            </ul>
             <ul class="niv_1">
                 <li>
                     <a href="#" class="button" title="Acceuil">Accueil</a>
@@ -47,11 +34,23 @@
                     <a href="#nav3" class="button" title="Contact">Contact</a>
                 </li>
             </ul>
-                    </div>
+        </div>
         <!-- réseaux sociaux -->
-    
     <section class="header_title">
-        <h1>Portofolio</h1>
+        <h1>Portfolio <br> <br>
+        <ul class="name_left">
+                    <!-- <a href="index.php" class="title_name" title="Accueil"> -->
+                    <?php
+                        $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                        $res = $mysqli->use_result();
+
+                        while ($row = $res->fetch_assoc()) {
+                            echo $row['nom']. " ";
+                            echo $row['prenom'];
+                        }
+                    ?>
+            </ul>
+        </h1>
     </section>
     </header> 
     <!-- bloc de 1 -->

@@ -75,14 +75,6 @@ nav a, nav a:visited {
 	margin-right: 50px;
 	font-family: 'Dancing Script', cursive;
 }
-.name_left  {
-	margin-top: -10px;
-	margin-bottom: 0%;
-	text-align: left;
-	margin-left: 50px;
-	position: absolute;
-	font-family: 'Dancing Script', cursive;
-}
 
 ul.niv_1 > li {
 	display: inline-block;
@@ -101,18 +93,25 @@ ul.niv_1 li a:hover, ul.niv_1 li a:focus {
 	background-size: cover;
 	background-attachment: fixed;
 	box-shadow: 0px 1px 11px rgba(0,0,0,0.4);
-	font-family: 'Meie Script', cursive;
+	font-family: 'Dancing Script', cursive;
 }
 section.header_title h1 {
 	margin: 0;
 	font-size: 100px;
 	text-align: center;
-	padding-top: 7%;
-	padding-bottom: 40%;
-	color: rgba(255, 255, 255, 0.815);
+	padding-top: 10%;
+	padding-bottom: 30%;
+	color:white;
 	text-shadow: 0px 10px 11px rgba(0,0,0,0.4);
 	position: relative;
 }
+.name_left{
+	padding: 30px;
+	font-size: 130px;
+	box-shadow: 0px 1px 11px rgba(0,0,0,0.4);
+	display: inline ;
+}
+
 /* Body */
 body{
 	margin:auto;
