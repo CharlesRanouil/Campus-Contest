@@ -35,10 +35,10 @@
                         <a href="#" class="button" title="Acceuil">Accueil</a>
                     </li>
                     <li>
-                        <a href="#nav1" class="button" title="Catégories">Moi</a>
+                        <a href="#nav1" class="button" title="Présention">Présentation</a>
                     </li>
                     <li>
-                        <a href="#nav2" class="button" title="Catégories">Projet</a>
+                        <a href="#nav2" class="button" title="Projets">Projets</a>
                     </li>
                     <li>
                         <a href="#slider" class="button" title="Avis">Avis</a>
@@ -118,26 +118,6 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ipsum sed unde voluptatibus itaque dolorum repudiandae culpa commodi asperiores sapiente inventore molestiae rerum sunt eveniet nostrum quisquam, corporis, alias illo!
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quod sint aliquid in dolorem eius quo, laboriosam aspernatur blanditiis reiciendis porro ea labore optio fugit dicta tenetur nesciunt! Odit, quidem? 
                     </p>
-                </div>
-            </div>
-            <div id="slider" class="slider">
-                <div class="container">
-                    <?php
-                            $mysqli->real_query("SELECT * FROM commentaire");
-                            $res = $mysqli->use_result();
-
-                            while ($row = $res->fetch_assoc()) {
-                                echo '<div class="slide">';
-                                echo '<h3>';
-                                echo $row['nom']." ";
-                                echo $row['prenom'];
-                                echo '</h3>';
-                                echo '<p>';
-                                echo $row['commentaire'];
-                                echo '</p>';
-                                echo '</div>';
-                            }
-                        ?>
                 </div>
             </div>
         </section>
