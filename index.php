@@ -19,7 +19,7 @@
             <!-- menu -->
             <div class="navbar" id="nav">
                 <!-- liste à puces -->
-                <div class="name" id="name">
+                <div class="name" id="name"><a href="#" class="button" title="Acceuil">
                 <?php
                             $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
                             $res = $mysqli->use_result();
@@ -29,7 +29,7 @@
                                 echo $row['prenom'];
                             }
                         ?>
-                </div>
+                </a></div>
                 <ul class="niv_1" id="nav_active">
                     <li>
                         <a href="#" class="button" title="Acceuil">Accueil</a>

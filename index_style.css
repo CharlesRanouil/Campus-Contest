@@ -73,6 +73,9 @@ ul.niv_1 > li {
 	display: inline;
 	font-family: 'Dancing Script', cursive;
 }
+.name a, .name a:visited {
+	color: #fff;
+}
 .navbar_active a, .navbar_active a:visited, .navbar_active {
 	transition: .5s;
 	font-size: 40px;
