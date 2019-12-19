@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Campus Contest</title>
-        <link rel="stylesheet" type="text/css" href="index_style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/slider.css" />
+        <script src="assets/js/slider.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Meie+Script&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3Aregular%2C300%7COpen%20Sans%3A700%2C400&amp;subset=">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -45,6 +47,21 @@
                     </li>
                     <li>
                         <a href="#" class="button" title="Contact">Contact</a>
+                    </li>
+                    <li>
+                        <!-- Bouton d'accès a l'administration -->
+                    <?php
+                        $mysqli->real_query("SELECT rang, utiliser FROM users WHERE utiliser = 1");
+                        if($mysqli) {
+                            $val = mysqli_fetch_assoc($mysqli->use_result());
+                            
+                            $privilege = $val['rang'];
+                            
+                                if($privilege==1) { // si = 1 donc c'est un admin
+                                    echo '<a href="#" class="button" title="Administration">Administration</a>';
+                                }
+                        }
+                    ?>
                     </li>
                 </ul>
             </div>
@@ -121,15 +138,32 @@
                 </div>
             </div>
         </section>
-        
-        <div class="vertical-slider">
-				<ul class="slides">
-					<li><p class="vertical-caption">Nice & clean</p></li>
-					<li><p class="vertical-caption">Fully Responsive</p></li>
-					<li><p class="vertical-caption">100% Responsive</p></li>
-					<li><p class="vertical-caption">Easy to Customize</p></li>
-				</ul>
+        <div class="container">
+            <div id="slider">
+                <div class="slide-left"><</div>
+                <div class="slide-right">></div>
+                    <?php
+                        $mysqli->real_query("SELECT * FROM commentaire");
+                        $res = $mysqli->use_result();
+
+                        while ($row = $res->fetch_assoc()) {
+                            echo '<article>';
+                            echo '<div>';
+                            echo '<h1>';
+                            echo  $row['nom']. ' '. $row['prenom'];
+                            echo '</h1>';
+                            echo '<p>';
+                            echo $row['commentaire'];
+                            echo '</p>';
+                            echo '</div>';
+                            echo '</article>';
+                        }
+                    ?>
             </div>
+        </div>
+        <script>
+            var newSlider = new KiwwwiSlider(document.querySelectorAll('#slider')[0], 3000, 1);
+        </script>
     </body>
     <!--footer-->
     <footer>
@@ -198,29 +232,10 @@
     </footer>
         <div class="sub_footer">
             <div class="text-footer">
+                Bouton test PHP (changement user) :
                 <form method="post" action="update.php">
-                    <button type="submit" name="jeremy" id="jeremy" class="btn btn-primary">Jeremy</button>
-                    <button type="submit" name="charles" id="charles" class="btn btn-primary">Charles</button>
+                    <button type="submit" name="switch" id="switch" class="btn btn-primary">Switch user</button>
                 </form>
-                <br>
-                <!-- Bouton d'accès a l'administration -->
-                    <?php
-                        $mysqli->real_query("SELECT rang, utiliser FROM users WHERE utiliser = 1");
-                        if($mysqli) {
-                            $val = mysqli_fetch_assoc($mysqli->use_result());
-                            
-                            $privilege = $val['rang'];
-                            
-                                if($privilege==1) { // si = 1 donc c'est un admin
-                                    echo '<form>';
-                                    echo '<button type="submit" name="admin" id="admin" class="btn btn-primary">Administration</button>';
-                                    echo '</form>';
-                                }
-                                else {
-                                echo 'Nop';
-                                }
-                        }
-                    ?>
             </div>
             <div class="coppy-right">
             &copy; 2019 - 
@@ -249,7 +264,7 @@
             
             window.onscroll = function(){
 
-            if (window.pageYOffset >1000) {
+            if (window.pageYOffset >850) {
 
                 nav.style.background = "#011735";
                 nav.style.height = "50px";
