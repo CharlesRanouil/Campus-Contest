@@ -32,7 +32,10 @@
                         <a href="#nav2" class="button" title="Catégories">Projet</a>
                     </li>
                     <li>
-                        <a href="#nav3" class="button" title="Contact">Contact</a>
+                        <a href="#slider" class="button" title="Avis">Avis</a>
+                    </li>
+                    <li>
+                        <a href="#" class="button" title="Contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -107,8 +110,7 @@
                     </p>
                 </div>
             </div>
-            <h2>Ce que les gens pense:</h2>
-            <div id="slider">
+            <div id="slider" class="slider">
                 <div class="container">
                     <?php
                             $mysqli->real_query("SELECT * FROM commentaire");
@@ -128,7 +130,6 @@
                         ?>
                 </div>
             </div>
-            <span id="timeline"></span>
         </section>
     </body>
     <!--footer-->
@@ -193,7 +194,7 @@
         </div>
         <!-- droite -->
         <div class="right">
-                <a href="#" title="Mentions légales">Mentions légales</a>
+            <a href="#" title="Mentions légales">Mentions légales</a>
         </div>
     </footer>
         <div class="sub_footer">
