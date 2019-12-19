@@ -13,15 +13,24 @@
     </head>
     <!--Corp du HTML-->
     <body>
-        <?php include 'bdd.php';?>
+        <?php include 'config.php';?>
         <!--header-->
         <header>
             <!-- menu -->
             <div class="navbar" id="nav">
                 <!-- liste à puces -->
-                    <!-- </a> -->
-                </h2>
-                <ul class="niv_1">
+                <div class="name" id="name">
+                <?php
+                            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                            $res = $mysqli->use_result();
+
+                            while ($row = $res->fetch_assoc()) {
+                                echo $row['nom']. " ";
+                                echo $row['prenom'];
+                            }
+                        ?>
+                </div>
+                <ul class="niv_1" id="nav_active">
                     <li>
                         <a href="#" class="button" title="Acceuil">Accueil</a>
                     </li>
@@ -74,13 +83,14 @@
                 </p>
         
                 <?php
-                    $mysqli->real_query("SELECT nom, prenom, utiliser FROM users ORDER BY id ASC");
+                    $mysqli->real_query("SELECT nom, prenom, utiliser, rang FROM users ORDER BY id ASC");
                     $res = $mysqli->use_result();
 
                     while ($row = $res->fetch_assoc()) {
                         echo " Nom = " . $row['nom'] . "\n<br>";
                         echo " Prénom = " . $row['prenom'] . "\n<br>";
                         echo " Utiliser = " . $row['utiliser'] . "\n<br>";
+                        echo " Rang = " . $row['rang'] . "\n<br>";
                         echo "<br>";
                     }
                 ?>
@@ -145,7 +155,7 @@
                         echo $row['twitter']." ";
                         echo '" class="btn btn-twitter">';
                     }
-                ?>
+            ?>
             <span class = "fa fa-twitter"></span></a>
             <?php
                     $mysqli->real_query("SELECT facebook FROM users WHERE utiliser = 1");
@@ -156,7 +166,7 @@
                         echo $row['facebook']." ";
                         echo '" class="btn btn-facebook">';
                     }
-                ?>
+            ?>
             <span class = "fa fa-facebook"></span></a>
             <?php
                     $mysqli->real_query("SELECT github FROM users WHERE utiliser = 1");
@@ -167,7 +177,7 @@
                         echo $row['github']." ";
                         echo '" class="btn btn-github">';
                     }
-                ?>
+            ?>
             <span class = "fa fa-github"></span></a>
             <?php
                     $mysqli->real_query("SELECT instagram FROM users WHERE utiliser = 1");
@@ -178,7 +188,7 @@
                         echo $row['instagram']." ";
                         echo '" class="btn btn-instagram">';
                     }
-                ?>
+            ?>
             <span class = "fa fa-instagram"></span></a>
             <?php
                     $mysqli->real_query("SELECT likedin FROM users WHERE utiliser = 1");
@@ -189,7 +199,7 @@
                         echo $row['likedin']." ";
                         echo '" class="btn btn-primary btn-linkedin">';
                     }
-                ?>
+            ?>
             <span class = "fa fa-linkedin"></span></a>      
         </div>
         <!-- droite -->
@@ -203,6 +213,25 @@
                     <button type="submit" name="jeremy" id="jeremy" class="btn btn-primary">Jeremy</button>
                     <button type="submit" name="charles" id="charles" class="btn btn-primary">Charles</button>
                 </form>
+                <br>
+                <!-- Bouton d'accès a l'administration -->
+                    <?php
+                        $mysqli->real_query("SELECT rang, utiliser FROM users WHERE utiliser = 1");
+                        if($mysqli) {
+                            $val = mysqli_fetch_assoc($mysqli->use_result());
+                            
+                            $privilege = $val['rang'];
+                            
+                                if($privilege==1) { // si = 1 donc c'est un admin
+                                    echo '<form>';
+                                    echo '<button type="submit" name="admin" id="admin" class="btn btn-primary">Administration</button>';
+                                    echo '</form>';
+                                }
+                                else {
+                                echo 'Nop';
+                                }
+                        }
+                    ?>
             </div>
             <div class="coppy-right">
             &copy; 2019 - 
@@ -225,8 +254,9 @@
         </div>
         <script type="text/javascript">
     
-            var  nav = document.getElementById('nav');
-            var  nav2 = document.getElementById('nav2');
+            var nav = document.getElementById('nav');
+            var nav_active = document.getElementById('nav_active');
+            var div = document.getElementById ('name');
             
             window.onscroll = function(){
 
@@ -235,12 +265,14 @@
                 nav.style.background = "#011735";
                 nav.style.height = "50px";
                 nav.style.boxShadow = "0px 1px 11px rgba(0,0,0,0.4)";
-                nav2.style.fontsize = "30px";
-                nav2.style.color = "#000";
+                nav_active.classList.add("navbar_active");
+                div.style.display = "block";
                 }
             else {
                 nav.style.background = "transparent";
                 nav.style.boxShadow = "none";
+                nav_active.classList.remove("navbar_active");
+                div.style.display = "none";
                 }
             }
         </script>

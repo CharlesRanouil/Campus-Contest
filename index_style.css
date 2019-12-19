@@ -34,28 +34,13 @@ ul.rs li a:focus {
 	color: #AE831D;
 }
 /* MENU */
-
-.navbar {
-	position: fixed;
-	width: 100%;
-	z-index: 100000;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	transition: .5s;
-}
-
-nav ul {
-	list-style-type: none;
-}
-
 nav a, nav a:visited {
 	display: block;
 	text-decoration: none; 	
-	color: white;
+	color: rgb(0, 0, 0);
 	padding: 20px 15px;
 	font-size: 50px;
 }
-
 .niv_1, .niv_1 a  {
 	margin-top: 0px;
 	margin-bottom: 3px;
@@ -64,16 +49,43 @@ nav a, nav a:visited {
 	font-size: 50px;
 	color: white;
 }
-
-.button {
-	margin-right: 50px;
-	font-family: 'Dancing Script', cursive;
-}
-
 ul.niv_1 > li {
 	display: inline-block;
 	position: relative;
 	color: #000;
+}
+.navbar {
+	position: fixed;
+	width: 100%;
+	z-index: 100000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: .5s;
+}
+.name {
+	margin-top: 7px;
+	text-align: left;
+	margin-left: 20px;
+	font-size: 30px;
+	color: white;
+	transition: .5s;
+	position: absolute;
+	display: inline;
+	font-family: 'Dancing Script', cursive;
+}
+.navbar_active a, .navbar_active a:visited, .navbar_active {
+	transition: .5s;
+	font-size: 40px;
+	color: #ffffff;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+.button {
+	margin-right: 50px;
+	font-family: 'Dancing Script', cursive;
 }
 
 ul.niv_1 li a:hover, ul.niv_1 li a:focus {
@@ -176,18 +188,43 @@ body{
   #slider {
 	overflow: hidden;
 	font-size: 1.2em;
-	background: #ffd7d1;
+	background-color: #3276b1;
 	text-align: center;
   }
   #slider .container {
 	position: relative;
 	animation: slide-animation 20s infinite;
+	
   }
   #slider .slide {
 	position: relative;
 	box-sizing: border-box;
 	padding-left: 500px;
-	padding-right: 500px;
+  }
+/* Annimation slider */
+  @keyframes slide-animation {
+	0% { 
+	  opacity: 0;
+	  bottom: 0px;
+	}
+	11% {
+	  opacity: 1;
+	  bottom: 0px; 
+	}
+	22% { bottom: 100%; }
+	33% { bottom: 100%; }
+	44% { bottom: 200%; }
+	55% { bottom: 200%; }
+	66% { bottom: 300%; }
+	77% { bottom: 300%; }
+	88% {
+	  opacity: 1;
+	  bottom: 400%; 
+	}
+	100% {
+	  opacity: 0;
+	  bottom: 400%;
+	}
   }
 
 /* Footer */
@@ -315,30 +352,4 @@ footer a:visited {
 	font-size: 1.25rem;
 	line-height: 1.5;
 	border-radius: 0.3rem;
-  }
-  
-  /* [ANIMATION] */
-  @keyframes slide-animation {
-	0% { 
-	  opacity: 0;
-	  bottom: 0;
-	}
-	11% {
-	  opacity: 1;
-	  bottom: 0; 
-	}
-	22% { bottom: 100%; }
-	33% { bottom: 100%; }
-	44% { bottom: 200%; }
-	55% { bottom: 200%; }
-	66% { bottom: 300%; }
-	77% { bottom: 300%; }
-	88% {
-	  opacity: 1;
-	  bottom: 400%; 
-	}
-	100% {
-	  opacity: 0;
-	  bottom: 400%;
-	}
   }

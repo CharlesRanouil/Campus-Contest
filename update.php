@@ -1,7 +1,7 @@
 <?php 
 
 // db connection
-include 'bdd.php';
+include 'config.php';
 
 
 if(isset($_POST['jeremy'])){
