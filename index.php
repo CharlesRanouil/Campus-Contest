@@ -121,6 +121,15 @@
                 </div>
             </div>
         </section>
+        
+        <div class="vertical-slider">
+				<ul class="slides">
+					<li><p class="vertical-caption">Nice & clean</p></li>
+					<li><p class="vertical-caption">Fully Responsive</p></li>
+					<li><p class="vertical-caption">100% Responsive</p></li>
+					<li><p class="vertical-caption">Easy to Customize</p></li>
+				</ul>
+            </div>
     </body>
     <!--footer-->
     <footer>
