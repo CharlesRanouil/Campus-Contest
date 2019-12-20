@@ -16,7 +16,7 @@ Lien site heberger : https://portfolio-campusacademy.000webhostapp.com/
 
 Lien trello : https://trello.com/b/XNI5nQnD/campus-contest
 
-Base de donnée: https://github.com/CharlesRanouil/Campus-Contest/blob/master/assets/portfolio.sql
+Base de donnée (au format .sql) : https://github.com/CharlesRanouil/Campus-Contest/blob/master/assets/portfolio.sql
 
 (Liaison entre la table users et presentation (user.id = presentation.id_user))
 
