@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3307
--- Généré le :  jeu. 19 déc. 2019 à 15:07
+-- Généré le :  ven. 20 déc. 2019 à 13:10
 -- Version du serveur :  10.3.14-MariaDB
 -- Version de PHP :  7.2.18
 
@@ -72,6 +72,52 @@ INSERT INTO `image` (`ID`, `URL`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `presentation`
+--
+
+DROP TABLE IF EXISTS `presentation`;
+CREATE TABLE IF NOT EXISTS `presentation` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `id_users` int(4) NOT NULL,
+  `img` varchar(400) NOT NULL,
+  `description` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `presentation`
+--
+
+INSERT INTO `presentation` (`id`, `id_users`, `img`, `description`) VALUES
+(1, 1, 'assets/images/jeremy.jfif', 'test 1'),
+(2, 2, 'assets/images/charles.jfif', 'test 2');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `recommandation`
+--
+
+DROP TABLE IF EXISTS `recommandation`;
+CREATE TABLE IF NOT EXISTS `recommandation` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
+  `message` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `recommandation`
+--
+
+INSERT INTO `recommandation` (`id`, `nom`, `email`, `tel`, `message`) VALUES
+(3, 'Brunet', 'jeremybrunet86470@gmail.com', '0673381679', 'Bonjour');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `users`
 --
 
@@ -96,8 +142,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`ID`, `rang`, `utiliser`, `nom`, `prenom`, `email`, `facebook`, `twitter`, `likedin`, `github`, `instagram`) VALUES
-(1, 1, 1, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com', 'https://www.facebook.com/james.gglebg', 'https://twitter.com/Jeremy_b86', 'https://www.linkedin.com/in/j%C3%A9r%C3%A9my-brunet-366684194/', 'https://github.com/Jeremyb86', 'https://www.instagram.com/jeremy_b86/'),
-(2, 0, 0, 'RANOUIL', 'Charles', 'ranouilcharles@gmail.com', 'https://www.facebook.com/charles.ranouil', 'https://twitter.com/Charles_Rnl', 'https://www.linkedin.com/in/charles-ranouil-3a4845194/', 'https://github.com/CharlesRanouil', 'https://www.instagram.com/charlesrnl/');
+(1, 1, 0, 'BRUNET', 'Jérémy', 'jeremybrunet86470@gmail.com', 'https://www.facebook.com/james.gglebg', 'https://twitter.com/Jeremy_b86', 'https://www.linkedin.com/in/j%C3%A9r%C3%A9my-brunet-366684194/', 'https://github.com/Jeremyb86', 'https://www.instagram.com/jeremy_b86/'),
+(2, 0, 1, 'RANOUIL', 'Charles', 'ranouilcharles@gmail.com', 'https://www.facebook.com/charles.ranouil', 'https://twitter.com/Charles_Rnl', 'https://www.linkedin.com/in/charles-ranouil-3a4845194/', 'https://github.com/CharlesRanouil', 'https://www.instagram.com/charlesrnl/');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
