@@ -34,16 +34,16 @@
                 </a></div>
                 <ul class="niv_1" id="nav_active">
                     <li>
-                        <a href="#" class="button" title="Acceuil">Accueil</a>
+                        <a href="index.php" class="button" title="Acceuil">Accueil</a>
                     </li>
                     <li>
-                        <a href="#nav1" class="button" title="Présention">Présentation</a>
+                        <a href="index.php#nav1" class="button" title="Présention">Présentation</a>
                     </li>
                     <li>
-                        <a href="#nav2" class="button" title="Projets">Projets</a>
+                        <a href="index.php#nav2" class="button" title="Projets">Projets</a>
                     </li>
                     <li>
-                        <a href="#slider" class="button" title="Recommandations">Recommandations</a>
+                        <a href="index.php#slider" class="button" title="Recommandations">Recommandations</a>
                     </li>
                     <li>
                         <a href="contact.php" class="button" title="Contact">Contact</a>
