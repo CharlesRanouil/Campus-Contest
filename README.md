@@ -10,9 +10,12 @@ lien site: https://portfolio-campusacademy.000webhostapp.com/
 
 lien trello: https://trello.com/b/XNI5nQnD/campus-contest
 
+Base de donnée: https://github.com/CharlesRanouil/Campus-Contest/blob/master/assets/portfolio.sql
+(Liaison entre la table users et presentation (user.id = presentation.id_user))
+
 css: assets/css
 js: assets/js
-BDD: assets/portfolio.sql
+
 
 Jeremy Brunet
 Charles Ranouil
