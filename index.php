@@ -66,8 +66,6 @@
         </section>
         <div class="container">
             <div id="slider">
-                <div class="slide-left"><</div>
-                <div class="slide-right">></div>
                     <?php
                         $mysqli->real_query("SELECT * FROM commentaire");
                         $res = $mysqli->use_result();
