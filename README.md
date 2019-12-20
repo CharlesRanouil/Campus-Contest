@@ -8,6 +8,8 @@ Le site intègre du PHP, c'est pourquoi on la heberger sur https://www.000webhos
 
 Les images du site toute été prise sur https://unsplash.com
 
+(Les images des réseaux sociaux du footer sur le site heberger ne s'affiche pas contrairement a en local avec Wamp Server)
+
 ----- Les liens -----
 
 Maquettage (disponible aussi sur trello) : https://github.com/CharlesRanouil/Campus-Contest/tree/master/Wireframe
