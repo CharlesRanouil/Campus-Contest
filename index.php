@@ -68,8 +68,8 @@
             </div>
             <div class="block_blue" id="nav2">
                 <div class="column_container">
-                    <h2>Titre</h2>
-                    <h3>Titre 2</h3>
+                <li>Projets</li>
+                    <h3>Nom projet 1</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi velit voluptates modi assumenda totam. Voluptate, facilis quos quasi quae illo reprehenderit aperiam tempora quibusdam, consequuntur recusandae nisi nesciunt pariatur voluptatibus.   
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero in, esse vel accusantium quod eum veniam, officia magnam ullam error, ipsum dignissimos quia sunt doloremque! Voluptates veniam quisquam obcaecati sit.
@@ -80,7 +80,7 @@
                     </p>
                 </div>
                 <div class="column_container">
-                    <h3>Titre3</h3>
+                    <h3>Nom projet 2</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi velit voluptates modi assumenda totam. Voluptate, facilis quos quasi quae illo reprehenderit aperiam tempora quibusdam, consequuntur recusandae nisi nesciunt pariatur voluptatibus.   
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero in, esse vel accusantium quod eum veniam, officia magnam ullam error, ipsum dignissimos quia sunt doloremque! Voluptates veniam quisquam obcaecati sit.
