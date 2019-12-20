@@ -8,25 +8,26 @@ Le site intègre du PHP, c'est pourquoi on la heberger sur https://www.000webhos
 
 Les images du site toute été prise sur https://unsplash.com
 
-
 ----- Les liens -----
 
+Maquettage (disponible aussi sur trello) : https://github.com/CharlesRanouil/Campus-Contest/tree/master/Wireframe
 
-maquettage: https://github.com/CharlesRanouil/Campus-Contest/tree/master/Wireframe
+Lien site heberger : https://portfolio-campusacademy.000webhostapp.com/
 
-lien site: https://portfolio-campusacademy.000webhostapp.com/
-
-lien trello: https://trello.com/b/XNI5nQnD/campus-contest
+Lien trello : https://trello.com/b/XNI5nQnD/campus-contest
 
 Base de donnée: https://github.com/CharlesRanouil/Campus-Contest/blob/master/assets/portfolio.sql
+
 (Liaison entre la table users et presentation (user.id = presentation.id_user))
+
+-----
 
 css: assets/css
 
 js: assets/js
 
+-----
 
-Jeremy Brunet
-Charles Ranouil
-
-Merci !
+Cordialement,
+Jeremy BRUNET et
+Charles RANOUIL
