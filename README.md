@@ -14,7 +14,7 @@ Maquettage (disponible aussi sur trello) : https://github.com/CharlesRanouil/Cam
 
 Lien site heberger : https://portfolio-campusacademy.000webhostapp.com/
 
-Lien trello : https://trello.com/b/XNI5nQnD/campus-contest
+Lien trello (listes des tâches) : https://trello.com/b/XNI5nQnD/campus-contest
 
 Base de donnée (au format .sql) : https://github.com/CharlesRanouil/Campus-Contest/blob/master/assets/portfolio.sql
 
