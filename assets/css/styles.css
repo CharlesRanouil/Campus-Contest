@@ -177,6 +177,9 @@ body{
 	text-align: justify;
 	font-family: 'lato', sans-serif;
 }
+.container {
+	font-family: 'ubuntu', sans-serif;
+}
 .column_container li{
 	font-size: 40px;
 	list-style: none;
@@ -191,10 +194,9 @@ body{
 .column_container_right {
 	display: inline-block;
 	padding-left: 50px;
-	padding-right: 0px;
+	padding-right: 10%;
 	text-align: justify;
 	font-family: 'lato', sans-serif;
-	width: 1000px;
 	height: 100%;
 	position: absolute;
 }
@@ -204,7 +206,7 @@ body{
 }
 
 .txt_intro{
-	padding-left: 270px;
+	padding-left: 10%;
 	padding-bottom: 50px;
 }
 
