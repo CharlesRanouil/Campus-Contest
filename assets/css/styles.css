@@ -154,8 +154,6 @@ body{
     padding-top: 100px;
     margin: auto;
     margin-bottom: 20px;
-	padding-left: 10%;
-	padding-right: 10%;
 	text-align: justify;
 }
 .block_blue {
@@ -178,6 +176,10 @@ body{
 	width: 40%;
 	text-align: justify;
 	font-family: 'lato', sans-serif;
+}
+.column_container li{
+	font-size: 40px;
+	list-style: none;
 }
 .column_container_left {
 	display: inline-block;
@@ -207,7 +209,6 @@ body{
 }
 
 .picture {
-	width:300px ;
 	display: inline-block;
 }
 
@@ -234,8 +235,8 @@ footer {
 }
 .mention {
 	position: absolute;
-	right: 300px;
-	top: 25px;
+	right: 10%;
+	top: 40%;
 }
 div.text-footer {
 	margin-left: 50px;
@@ -400,4 +401,89 @@ footer a:visited {
     background-color: #0062cc;
     border: none;
     cursor: pointer;
+}
+/* Responsive */
+@media(min-width: 1449px) and (max-width: 1700px)
+
+{
+	
+	.niv_1, .niv_1 a  {
+		margin-top: 0px;
+		margin-bottom: 3px;
+		text-align: right;
+		margin-right: 20px;
+		font-size: 40px;
+		color: white;
+		font-family: 'Dancing Script', cursive;
+	}
+	
+	.navbar_active a, .navbar_active a:visited, .navbar_active {
+		transition: .5s;
+		font-size: 30px;
+		margin-top : 7px;
+		color: #ffffff;
+	}
+}
+@media(min-width: 1300px) and (max-width: 1450px)
+
+{
+	
+	.niv_1, .niv_1 a  {
+		margin-top: 0px;
+		margin-bottom: 3px;
+		text-align: right;
+		margin-right: 30px;
+		font-size: 20px;
+		color: white;
+		font-family: 'Dancing Script', cursive;
+	}
+	
+	.navbar_active a, .navbar_active a:visited, .navbar_active {
+		transition: .5s;
+		font-size: 25px;
+		margin-top : 10px;
+		color: #ffffff;
+	}
+}
+@media(min-width: 1000px) and (max-width: 1299px)
+
+{
+	
+	.niv_1, .niv_1 a  {
+		margin-top: 0px;
+		margin-bottom: 3px;
+		text-align: right;
+		margin-right: 20px;
+		font-size: 25px;
+		color: white;
+		font-family: 'Dancing Script', cursive;
+	}
+	
+	.navbar_active a, .navbar_active a:visited, .navbar_active {
+		transition: .5s;
+		font-size: 20px;
+		margin-top : 12px;
+		color: #ffffff;
+	}
+}
+@media(min-width: 500px) and (max-width: 999px)
+
+{
+	
+	.niv_1, .niv_1 a  {
+		margin-top: 0px;
+		margin-bottom: 3px;
+		text-align: right;
+		margin-right: 10px;
+		font-size: 28px;
+		color: white;
+		font-family: 'Dancing Script', cursive;
+	}
+	
+	.navbar_active a, .navbar_active a:visited, .navbar_active {
+		transition: .5s;
+		font-size: 25px;
+		margin-top : 10px;
+		color: #ffffff;
+	}
 }
