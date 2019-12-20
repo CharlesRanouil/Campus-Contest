@@ -20,10 +20,8 @@
         <?php include 'header.php';?>
         <section>
             <div class="txt_intro" id="nav1">
-                <div class="column_container_pic">
-                    <p>
-                    <img src="assets/images/jeremy.jfif" alt="logo_campus_academy">
-                    </p>
+                <div class="picture">
+                    <img src="assets/images/jeremy.jfif" alt="image profil" width=315px >
                 </div>
                 <div class="column_container_right">
                     <h2>Titre</h2>
