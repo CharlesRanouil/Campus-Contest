@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Campus Contest</title>
+        <title>Portfolio</title>
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/slider.css" />
         <script src="assets/js/slider.min.js"></script>
@@ -20,28 +20,23 @@
         <?php include 'header.php';?>
         <section>
             <div class="txt_intro" id="nav1">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi velit voluptates modi assumenda totam. Voluptate, facilis quos quasi quae illo reprehenderit aperiam tempora quibusdam, consequuntur recusandae nisi nesciunt pariatur voluptatibus.   
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero in, esse vel accusantium quod eum veniam, officia magnam ullam error, ipsum dignissimos quia sunt doloremque! Voluptates veniam quisquam obcaecati sit.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis in necessitatibus nobis distinctio veniam, enim nam animi error magni maxime! Modi fugit explicabo ratione at voluptatibus, fuga voluptates cupiditate voluptas.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam consequuntur quaerat saepe in ipsa tempora deserunt, laudantium sunt quos ratione! Voluptate dolorum eos dolorem repellat, dicta corrupti facilis dolor.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ipsum sed unde voluptatibus itaque dolorum repudiandae culpa commodi asperiores sapiente inventore molestiae rerum sunt eveniet nostrum quisquam, corporis, alias illo!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quod sint aliquid in dolorem eius quo, laboriosam aspernatur blanditiis reiciendis porro ea labore optio fugit dicta tenetur nesciunt! Odit, quidem?
-                    
-                </p>
-        
-                <?php
-                    $mysqli->real_query("SELECT nom, prenom, utiliser, rang FROM users ORDER BY id ASC");
-                    $res = $mysqli->use_result();
-
-                    while ($row = $res->fetch_assoc()) {
-                        echo " Nom = " . $row['nom'] . "\n<br>";
-                        echo " Prénom = " . $row['prenom'] . "\n<br>";
-                        echo " Utiliser = " . $row['utiliser'] . "\n<br>";
-                        echo " Rang = " . $row['rang'] . "\n<br>";
-                        echo "<br>";
-                    }
-                ?>
+                <div class="column_container_pic">
+                    <p>
+                    <img src="assets/images/jeremy.jfif" alt="logo_campus_academy">
+                    </p>
+                </div>
+                <div class="column_container_right">
+                    <h2>Titre</h2>
+                    <h3>Titre 2</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi velit voluptates modi assumenda totam. Voluptate, facilis quos quasi quae illo reprehenderit aperiam tempora quibusdam, consequuntur recusandae nisi nesciunt pariatur voluptatibus.   
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero in, esse vel accusantium quod eum veniam, officia magnam ullam error, ipsum dignissimos quia sunt doloremque! Voluptates veniam quisquam obcaecati sit.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis in necessitatibus nobis distinctio veniam, enim nam animi error magni maxime! Modi fugit explicabo ratione at voluptatibus, fuga voluptates cupiditate voluptas.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam consequuntur quaerat saepe in ipsa tempora deserunt, laudantium sunt quos ratione! Voluptate dolorum eos dolorem repellat, dicta corrupti facilis dolor.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ipsum sed unde voluptatibus itaque dolorum repudiandae culpa commodi asperiores sapiente inventore molestiae rerum sunt eveniet nostrum quisquam, corporis, alias illo!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quod sint aliquid in dolorem eius quo, laboriosam aspernatur blanditiis reiciendis porro ea labore optio fugit dicta tenetur nesciunt! Odit, quidem? 
+                    </p>
+                </div>
             </div>
             <div class="block_blue" id="nav2">
                 <div class="column_container">

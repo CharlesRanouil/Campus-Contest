@@ -154,8 +154,8 @@ body{
     padding-top: 100px;
     margin: auto;
     margin-bottom: 20px;
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 10%;
+	padding-right: 10%;
 	text-align: justify;
 }
 .block_blue {
@@ -178,6 +178,29 @@ body{
 	text-align: justify;
 	padding-right: 7%;
 	font-family: 'lato', sans-serif;
+}
+.column_container_left {
+	display: inline-block;
+    padding-left: 7.5px;
+	text-align: justify;
+	padding-right: 7%;
+	font-family: 'lato', sans-serif;
+}
+.column_container_right {
+	display: inline-block;
+    padding-left: 50px;
+	text-align: justify;
+	padding-right: 7%;
+	font-family: 'lato', sans-serif;
+}
+.column_container_pic {
+	display: inline-block;
+    padding-left: 7.5px;
+	width: 40%;
+	text-align: justify;
+	padding-right: 7%;
+	font-family: 'lato', sans-serif;
+	top:0;
 }
 /* Slider */
 .vertical-slider{
@@ -319,7 +342,7 @@ footer a:visited {
 	border-radius: 0.3rem;
   }
   /* Formulaire de contact */
-  .contact-form{
+.contact-form{
     background: #fff;
     margin-top: 10%;
     margin-bottom: 5%;

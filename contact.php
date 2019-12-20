@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Campus Contest</title>
+        <title>Portfolio</title>
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/slider.css" />
         <script src="assets/js/slider.min.js"></script>
@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/bootstrap-social.css">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="assets/css/contact-bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <!--Corp du HTML-->
     <body>
@@ -27,32 +27,33 @@
                         <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
                     </div>
                     <form method="post">
-                        <h3>Drop Us a Message</h3>
+                        <h3>Contactez-nous</h3>
                     <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                                    <input type="text" name="txtName" class="form-control" placeholder="Votre Nom *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                                    <input type="text" name="txtEmail" class="form-control" placeholder="Votre Email *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                                    <input type="text" name="txtPhone" class="form-control" placeholder="Votre numéro de téléphone *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                                    <input type="submit" name="btnSubmit" class="btnContact" value="Envoyer" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                                    <textarea name="txtMsg" class="form-control" placeholder="Votre Message *" style="width: 100%; height: 150px;"></textarea>
                                 </div>
                             </div>
                         </div>
                     </form>
+                    </div>
         </section>
-</div>
     </body>
     <!--footer-->
     <?php include 'footer.php';?>
 </html>
+
