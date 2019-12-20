@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <title>Portfolio</title>
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/slider.css" />
         <script src="assets/js/slider.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Meie+Script&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3Aregular%2C300%7COpen%20Sans%3A700%2C400&amp;subset=">
@@ -39,14 +38,15 @@
                                 <div class="form-group">
                                     <input type="text" name="txtPhone" class="form-control" placeholder="Votre numéro de téléphone *" value="" />
                                 </div>
-                                <div class="form-group">
-                                    <input type="submit" name="btnSubmit" class="btnContact" value="Envoyer" />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
+                            
+                            
                                 <div class="form-group">
                                     <textarea name="txtMsg" class="form-control" placeholder="Votre Message *" style="width: 100%; height: 150px;"></textarea>
                                 </div>
+                                <div class="form-group">
+                                    <input type="submit" name="btnSubmit" class="btnContact" value="Envoyer" />
+                                </div>
+                                
                             </div>
                         </div>
                     </form>

@@ -75,7 +75,7 @@
             <span class = "fa fa-linkedin"></span></a>      
         </div>
         <!-- droite -->
-        <div class="right">
+        <div class="mention">
             <a href="#" title="Mentions légales">Mentions légales</a>
         </div>
     </footer>
