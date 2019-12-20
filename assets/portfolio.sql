@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3307
--- Généré le :  jeu. 19 déc. 2019 à 15:07
+-- Généré le :  ven. 20 déc. 2019 à 13:40
 -- Version du serveur :  10.3.14-MariaDB
 -- Version de PHP :  7.2.18
 
@@ -68,6 +68,53 @@ CREATE TABLE IF NOT EXISTS `image` (
 INSERT INTO `image` (`ID`, `URL`, `description`) VALUES
 (1, 'assets/images/logo_ca.png', 'Logo campus academy'),
 (2, 'assets\\images\\bitcoin.jpg', 'Logo');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `presentation`
+--
+
+DROP TABLE IF EXISTS `presentation`;
+CREATE TABLE IF NOT EXISTS `presentation` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `id_users` int(4) NOT NULL,
+  `img` varchar(400) NOT NULL,
+  `description` varchar(10000) NOT NULL,
+  `age` int(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `presentation`
+--
+
+INSERT INTO `presentation` (`id`, `id_users`, `img`, `description`, `age`) VALUES
+(1, 1, 'assets/images/jeremy.jfif', 'Je suis analyste-programmeur et diplômé d\'un DUT informatique suivi d\'une licence professionnelle CDED (Concepteur Développeur en Environnement Distribué). Je travaille actuellement en tant que développeur au CRITT Matériaux Alsace, situé à Schiltigheim en Alsace. Je suis également le pilote du processus \'Systèmes informatiques\'.\r\n\r\nCe portfolio a pour but de présenter les différents projets sur lesquels j\'ai travaillé ces dernières années. Vous pouvez également visualiser mon CV et le télécharger.\r\n\r\nSi vous avez une question, ou si vous avez simplement besoin d\'un renseignement, vous pouvez me contacter', 23),
+(2, 2, 'assets/images/charles.jfif', 'Interessé par la science de la Technologie et de l\'Information, j\'ai decidé de commencer un Certificat Fédéral de Capacité d\'informaticien en Suisse en 2012.\r\n\r\nSpecialisé dans les Technologies Web, mes domaines de prédiléctions sont le JavaScript, l\'HTML5 et le CSS3, ainsi que le PHP, NODE.JS et jSon. Mes expérience antérieures m\'ont formés à atteindre les objectifs fixés dans les divers projets oú j\'ai contribué. D\'un naturel ouvert et toujours prêt a acquérir de nouvelles compétences.\r\n\r\nCe portfolio a pour but de présenter les différents projets sur lesquels j\'ai travaillé ces dernières années. Vous pouvez également visualiser mon CV et le télécharger.', 20);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `recommandation`
+--
+
+DROP TABLE IF EXISTS `recommandation`;
+CREATE TABLE IF NOT EXISTS `recommandation` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
+  `message` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `recommandation`
+--
+
+INSERT INTO `recommandation` (`id`, `nom`, `email`, `tel`, `message`) VALUES
+(3, 'Brunet', 'jeremybrunet86470@gmail.com', '0673381679', 'Bonjour');
 
 -- --------------------------------------------------------
 

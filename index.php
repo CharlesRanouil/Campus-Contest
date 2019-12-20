@@ -93,6 +93,7 @@
             </div>
         </section>
         <div class="container">
+            <h2>Recommendation</h2>
             <div id="slider">
                     <?php
                         $mysqli->real_query("SELECT * FROM commentaire");
