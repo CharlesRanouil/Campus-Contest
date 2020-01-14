@@ -20,5 +20,5 @@ if(isset($_POST['switch'])){
     }
 
 }
-header ("Location: $_SERVER[HTTP_REFERER]" );
+header ("Location: index.php" );
 ?>

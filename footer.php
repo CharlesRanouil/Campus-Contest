@@ -19,7 +19,7 @@
         <!-- gauche  -->
         <div class="footer_social">
             <?php
-                    $mysqli->real_query("SELECT twitter FROM users WHERE utiliser = 1");
+                    $mysqli->real_query("SELECT twitter FROM users_infos WHERE utiliser = 1");
                     $res = $mysqli->use_result();
 
                     while ($row = $res->fetch_assoc()) {
@@ -30,7 +30,7 @@
             ?>
             <span class = "fa fa-twitter"></span></a>
             <?php
-                    $mysqli->real_query("SELECT facebook FROM users WHERE utiliser = 1");
+                    $mysqli->real_query("SELECT facebook FROM users_infos WHERE utiliser = 1");
                     $res = $mysqli->use_result();
 
                     while ($row = $res->fetch_assoc()) {
@@ -41,7 +41,7 @@
             ?>
             <span class = "fa fa-facebook"></span></a>
             <?php
-                    $mysqli->real_query("SELECT github FROM users WHERE utiliser = 1");
+                    $mysqli->real_query("SELECT github FROM users_infos WHERE utiliser = 1");
                     $res = $mysqli->use_result();
 
                     while ($row = $res->fetch_assoc()) {
@@ -52,7 +52,7 @@
             ?>
             <span class = "fa fa-github"></span></a>
             <?php
-                    $mysqli->real_query("SELECT instagram FROM users WHERE utiliser = 1");
+                    $mysqli->real_query("SELECT instagram FROM users_infos WHERE utiliser = 1");
                     $res = $mysqli->use_result();
 
                     while ($row = $res->fetch_assoc()) {
@@ -63,7 +63,7 @@
             ?>
             <span class = "fa fa-instagram"></span></a>
             <?php
-                    $mysqli->real_query("SELECT likedin FROM users WHERE utiliser = 1");
+                    $mysqli->real_query("SELECT likedin FROM users_infos WHERE utiliser = 1");
                     $res = $mysqli->use_result();
 
                     while ($row = $res->fetch_assoc()) {
@@ -80,17 +80,11 @@
         </div>
     </footer>
         <div class="sub_footer">
-            <div class="text-footer">
-                Bouton test PHP (changement user) :
-                <form method="post" action="update.php">
-                    <button type="submit" name="switch" id="switch" class="btn btn-primary">Switch user</button>
-                </form>
-            </div>
             <div class="coppy-right">
             Photo prise sur Unsplash &copy; 2019 - 
                 
                 <?php
-                    $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                    $mysqli->real_query("SELECT nom, prenom, utiliser FROM users_infos WHERE utiliser = 1");
                     $res = $mysqli->use_result();
         
                     while ($row = $res->fetch_assoc()) {

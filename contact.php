@@ -1,3 +1,4 @@
+<?php include 'req_log.php';?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -59,7 +60,7 @@
             $msg=$_POST['txtMsg'];
  
             //On prépare la commande sql d'insertion
-            $sql = "INSERT INTO recommandation (nom, email, tel, message) VALUES('$nom','$email','$tel','$msg')"; 
+            $sql = "INSERT INTO commentaire (nom, email, tel, message) VALUES('$nom','$email','$tel','$msg')"; 
  
             //on lance la commande (mysqli_query)
             mysqli_query($mysqli,$sql);

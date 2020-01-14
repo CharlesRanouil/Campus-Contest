@@ -1,17 +1,9 @@
+<?php include 'req_log.php';?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/slider.css" />
-        <script src="assets/js/slider.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Meie+Script&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3Aregular%2C300%7COpen%20Sans%3A700%2C400&amp;subset=">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/bootstrap-social.css">
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <!--Corp du HTML-->
     <body>
@@ -21,9 +13,8 @@
         <section>
             <div class="txt_intro" id="nav1">
                 <div class="picture">
-                    <!-- <img src="assets/images/jeremy.jfif" alt="image profil" width=315px > -->
                     <?php
-                            $mysqli->real_query("SELECT users.utiliser, presentation.img FROM users INNER JOIN presentation ON users.id = presentation.id_users WHERE users.utiliser = 1 LIMIT 0,25");
+                            $mysqli->real_query("SELECT users_infos.utiliser, presentation.img FROM users_infos INNER JOIN presentation ON users_infos.id = presentation.id_users WHERE users_infos.utiliser = 1 LIMIT 0,25");
                             $res = $mysqli->use_result();
 
                             while ($row = $res->fetch_assoc()) {
@@ -35,7 +26,7 @@
                 </div>
                 <div class="column_container_right">
                     <h2> <?php
-                            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users_infos WHERE utiliser = 1");
                             $res = $mysqli->use_result();
 
                             while ($row = $res->fetch_assoc()) {
@@ -45,7 +36,7 @@
                         ?></h2>
                     <h3>
                     <?php
-                            $mysqli->real_query("SELECT users.utiliser, presentation.age FROM users INNER JOIN presentation ON users.id = presentation.id_users WHERE users.utiliser = 1 LIMIT 0,25");
+                            $mysqli->real_query("SELECT users_infos.utiliser, presentation.age FROM users_infos INNER JOIN presentation ON users_infos.id = presentation.id_users WHERE users_infos.utiliser = 1 LIMIT 0,25");
                             $res = $mysqli->use_result();
 
                             while ($row = $res->fetch_assoc()) {
@@ -56,7 +47,7 @@
                     </h3>
                     <p>
                     <?php
-                            $mysqli->real_query("SELECT users.utiliser, presentation.description FROM users INNER JOIN presentation ON users.id = presentation.id_users WHERE users.utiliser = 1 LIMIT 0,25");
+                            $mysqli->real_query("SELECT users_infos.utiliser, presentation.description FROM users_infos INNER JOIN presentation ON users_infos.id = presentation.id_users WHERE users_infos.utiliser = 1 LIMIT 0,25");
                             $res = $mysqli->use_result();
 
                             while ($row = $res->fetch_assoc()) {
@@ -93,10 +84,10 @@
             </div>
         </section>
         <div class="container">
-            <h2>Recommendation</h2>
+            <h2>Recommandations</h2>
             <div id="slider">
                     <?php
-                        $mysqli->real_query("SELECT * FROM commentaire");
+                        $mysqli->real_query("SELECT * FROM recommandation");
                         $res = $mysqli->use_result();
 
                         while ($row = $res->fetch_assoc()) {
@@ -106,7 +97,7 @@
                             echo  $row['nom']. ' '. $row['prenom'];
                             echo '</h1>';
                             echo '<p>';
-                            echo $row['commentaire'];
+                            echo $row['avis'];
                             echo '</p>';
                             echo '</div>';
                             echo '</article>';

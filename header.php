@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Campus Contest</title>
+        <link rel="stylesheet" type="text/css" href="admin/img_styles.php">
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/slider.css" />
         <script src="assets/js/slider.min.js"></script>
@@ -15,7 +16,11 @@
     </head>
     <!--Corp du HTML-->
     <body>
-        <?php include 'config.php';?>
+        <?php include 'config.php';
+        $utiliser = $mysqli->query("SELECT url FROM edit_img WHERE nom = 'Logo'");
+        $logo = $utiliser->fetch_assoc();
+        ?>
+
         <!--header-->
         <header>
             <!-- menu -->
@@ -23,7 +28,7 @@
                 <!-- liste à puces -->
                 <div class="name" id="name"><a href="#" class="button" title="Acceuil">
                 <?php
-                            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users_infos WHERE utiliser = 1");
                             $res = $mysqli->use_result();
 
                             while ($row = $res->fetch_assoc()) {
@@ -50,31 +55,46 @@
                     </li>
                     <li>
                         <!-- Bouton d'accès a l'administration -->
-                    <?php
-                        $mysqli->real_query("SELECT rang, utiliser FROM users WHERE utiliser = 1");
+                    <!-- <?php
+                        $mysqli->real_query("SELECT rang, utiliser FROM users_infos WHERE utiliser = 1");
                         if($mysqli) {
                             $val = mysqli_fetch_assoc($mysqli->use_result());
                             
                             $privilege = $val['rang'];
                             
                                 if($privilege==1) { // si = 1 donc c'est un admin
-                                    echo '<a href="#" class="button" title="Administration">Administration</a>';
+                                    echo '<a href="admin/accueil.php" class="button" title="Administration">Administration</a>';
                                 }
                         }
+                    ?> -->
+                   <?php 
+                    if (empty($_SESSION['pseudo'])) {
+                        
+                    } else {
+                        if($_SESSION['pseudo']) {
+                            $session_user = $_SESSION['pseudo'];
+                            $admin_check_query = "SELECT * FROM users_infos WHERE user_id = (SELECT id FROM users WHERE username = '$session_user') and rang = 1";
+                            $result = mysqli_query($db, $admin_check_query);
+                            $admin = mysqli_fetch_assoc($result);
+                            if ($admin) {
+                                echo '<a href="admin/accueil.php" class="button" title="Administration">Administration</a>';
+                            } else {
+                                echo '<a href="membre/accueil.php" class="button" title="Membre">Panel</a>';
+                            }
+                        }
+                    }
                     ?>
                     </li>
                 </ul>
             </div>
             <!-- réseaux sociaux -->
         <section class="header_title">
-            <div class="logo">
-                <img src="assets/images/logo_ca.png" alt="logo_campus_academy" width="10%" height="10%">
-            </div>
+            <div class="logo"></div>
             <h1>Portfolio<br>
             <ul class="name_left">
                         <!-- <a href="index.php" class="title_name" title="Accueil"> -->
                         <?php
-                            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users WHERE utiliser = 1");
+                            $mysqli->real_query("SELECT nom, prenom, utiliser FROM users_infos WHERE utiliser = 1");
                             $res = $mysqli->use_result();
 
                             while ($row = $res->fetch_assoc()) {
@@ -93,6 +113,10 @@
             var nav_active = document.getElementById('nav_active');
             var div = document.getElementById ('name');
             
+            window.onload = function() {
+                div.style.display = "none";
+            }
+
             window.onscroll = function(){
 
             if (window.pageYOffset >100) {
