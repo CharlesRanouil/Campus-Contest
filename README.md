@@ -1,17 +1,35 @@
 # Campus-Contest
 PortFolio
-Pour changer les site de la version de charles a celle de jeremy cliquer sur le boutton "switch user" en bas a gauche de la page.
 
-maquettage: wireframe/
+Pour changer les informations du site de Charles à celle de Jeremy cliquer sur le bouton "switch user" en bas à gauche de la page.
+(Une sorte de bouton pour se connecter (sans mot de passe pour le moment), c'est provisoir et ne restera pas sur la version finale)
+
+Le site intègre du PHP, c'est pourquoi on la heberger sur https://www.000webhost.com/
+
+Les images du site toute été prise sur https://unsplash.com
+
+(Les images des réseaux sociaux du footer sur le site heberger ne s'affiche pas contrairement a en local avec Wamp Server)
+
+----- Les liens -----
+
+Maquettage (disponible aussi sur trello) : https://github.com/CharlesRanouil/Campus-Contest/tree/master/Wireframe
+
+Lien site heberger : https://portfolio-campusacademy.000webhostapp.com/
+
+Lien trello (listes des tâches) : https://trello.com/b/XNI5nQnD/campus-contest
+
+Base de donnée (au format .sql) : https://github.com/CharlesRanouil/Campus-Contest/blob/master/assets/portfolio.sql
+
+(Liaison entre la table users et presentation (user.id = presentation.id_user))
+
+-----
+
 css: assets/css
+
 js: assets/js
-BDD: assets/
 
-lien site: https://portfolio-campusacademy.000webhostapp.com/
+-----
 
-lien trello: https://trello.com/b/XNI5nQnD/campus-contest
-
-Jeremy Brunet
-Charles Ranouil
-
-Merci !
+Cordialement,
+Jeremy BRUNET et
+Charles RANOUIL
